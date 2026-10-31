@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import aiRouter from "./routes/ai.js";
 
 
 const app = express();
@@ -12,6 +13,9 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok", aiMode: process.env.AI_MODE || "mock" });
 });
 
+app.use("/ai", aiRouter);
+
+app.use((req, res) => res.status(404).json({ error: "Not found" }));
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`Backend running on port ${port}`));
