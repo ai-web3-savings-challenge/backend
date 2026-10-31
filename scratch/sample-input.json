@@ -1,3 +1,4 @@
+
 {
   "customer": {
     "customer_id": "customer_001",
@@ -13,12 +14,43 @@
     "target_date": "2027-10-01"
   },
   "savings_history": [
-    { "month": "2026-01", "planned": 166667, "actual": 150000 },
-    { "month": "2026-02", "planned": 166667, "actual": 160000 },
-    { "month": "2026-03", "planned": 166667, "actual": 140000 },
-    { "month": "2026-04", "planned": 166667, "actual": 100000 },
-    { "month": "2026-05", "planned": 166667, "actual": 0 },
-    { "month": "2026-06", "planned": 166667, "actual": 100000 }
+      {
+        "month": "2026-01",
+        "planned": 166667, 
+        "actual": 150000,
+        "balance_after_contribution": 1850000
+      },
+      {
+        "month": "2026-02",
+        "planned": 166667, 
+        "actual": 160000,
+        "balance_after_contribution": 1690000
+      },
+      {
+        "month": "2026-03",
+        "planned": 166667, 
+        "actual": 140000,
+        "balance_after_contribution": 1550000
+      },
+      {
+        "month": "2026-04",
+        "planned": 166667, 
+        "actual": 100000,
+        "balance_after_contribution": 1450000
+      },
+      {
+        "month": "2026-05",
+        "planned": 166667, 
+        "actual": 0,
+        "balance_after_contribution": 1450000
+      },
+      {
+        "month": "2026-04",
+        "planned": 166667, 
+        "actual": 100000,
+        "balance_after_contribution": 1350000
+      }
+
   ],
   "recent_transactions": [
     {
