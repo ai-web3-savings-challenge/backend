@@ -10,7 +10,8 @@ const ABI = [
   "event ContributionRecorded(address indexed user, uint256 amount, uint256 totalContributed)",
 ];
 
-const EXPLORER = "https://celo-sepolia.blockscout.com"; // the contract has no currency, so this is a project convention
+const EXPLORER = "https://celo-sepolia.blockscout.com";
+const CURRENCY = "NGN";   // the contract has no currency, so this is a project convention
 const POLL_MS = 5000;     // check for new events every 5 seconds
 const CHUNK = 2000;       // blocks read per request (public nodes limit this)
 
@@ -18,7 +19,7 @@ const CHUNK = 2000;       // blocks read per request (public nodes limit this)
 const toDate = (unixSeconds) => new Date(unixSeconds * 1000).toISOString().slice(0, 10);
 
 // Friendly versions for reading, for example "NGN 2,000,000" and "1 January 2027"
-const money = (n) => ` ${Number(n).toLocaleString("en-US")}`;
+const money = (n) => `${CURRENCY} ${Number(n).toLocaleString("en-US")}`;
 const longDate = (isoDate) =>
   new Date(isoDate).toLocaleDateString("en-GB", {
     day: "numeric",
